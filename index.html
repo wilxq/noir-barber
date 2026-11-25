@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOIR — премиальный современный барбершоп. Минимализм, архитектурная точность стрижек и кинематографичная атмосфера.">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>NOIR — Премиальный барбершоп</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
+
+  <!-- Typography: Cormorant Garamond (Display) + Manrope (UI / Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="canonical" href="https://noir-barber.example.com/">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="NOIR BARBER">
+  <meta property="og:title" content="NOIR — Премиальный барбершоп">
+  <meta property="og:description" content="Камерное пространство мужского груминга в центре Москвы. Архитектурная точность стрижек, культура тишины и европейский ритуал ухода.">
+  <meta property="og:image" content="./assets/images/hero-portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOIR — Премиальный барбершоп">
+  <meta name="twitter:description" content="Камерное пространство мужского груминга в центре Москвы. Архитектурная точность стрижек, культура тишины и европейский ритуал ухода.">
+  <meta name="twitter:image" content="./assets/images/hero-portrait.jpg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к основному содержанию</a>
+
+  <!-- Minimalist Top Navigation -->
+  <header class="site-header" id="site-header" data-header data-hero-enter="header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#hero" aria-label="NOIR — на главную">
+        <span class="brand__wordmark">NOIR</span>
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__descriptor">Barber Atelier</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Основная навигация">
+        <ul class="primary-nav__list">
+          <li><a class="primary-nav__link is-active" href="#hero" data-nav-link>Главная</a></li>
+          <li><a class="primary-nav__link" href="#about" data-nav-link>О нас</a></li>
+          <li><a class="primary-nav__link" href="#services" data-nav-link>Услуги</a></li>
+          <li><a class="primary-nav__link" href="#masters" data-nav-link>Мастера</a></li>
+          <li><a class="primary-nav__link" href="#contacts" data-nav-link>Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="site-header__phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+        <a class="btn btn--outline site-header__cta" href="#booking">
+          <span>Записаться</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Открыть меню навигации"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          data-menu-toggle
+        >
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+          <span class="menu-toggle__line" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" data-mobile-drawer>
+    <div class="container mobile-drawer__inner">
+      <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+        <a class="mobile-drawer__link" href="#hero" data-mobile-link>
+          <span>Главная</span>
+          <span class="mobile-drawer__index">01</span>
+        </a>
+        <a class="mobile-drawer__link" href="#about" data-mobile-link>
+          <span>О нас</span>
+          <span class="mobile-drawer__index">02</span>
+        </a>
+        <a class="mobile-drawer__link" href="#services" data-mobile-link>
+          <span>Услуги</span>
+          <span class="mobile-drawer__index">03</span>
+        </a>
+        <a class="mobile-drawer__link" href="#masters" data-mobile-link>
+          <span>Мастера</span>
+          <span class="mobile-drawer__index">04</span>
+        </a>
+        <a class="mobile-drawer__link" href="#contacts" data-mobile-link>
+          <span>Контакты</span>
+          <span class="mobile-drawer__index">05</span>
+        </a>
+      </nav>
+
+      <div class="mobile-drawer__footer">
+        <a class="btn btn--primary mobile-drawer__cta" href="#booking" data-mobile-link>
+          <span>Записаться на визит</span>
+          <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+        </a>
+        <div class="mobile-drawer__meta">
+          <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+          <span>ул. Тверская, 18 · 10:00 — 22:00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Presentation Flow -->
+  <main class="site-main" id="main-content">
+
+    <!-- 01. HERO SECTION -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <!-- Subtle architectural side rail (desktop) -->
+      <aside class="hero__rail" aria-hidden="true" data-hero-enter="fade" data-hero-delay="4">
+        <span class="hero__rail-text">EST. 2019 — MOSCOW</span>
+        <span class="hero__rail-line"></span>
+        <span class="hero__rail-index">01</span>
+      </aside>
+
+      <div class="container hero__container">
+        <div class="hero__stage">
+          <!-- Editorial Typography & Actions Column -->
+          <div class="hero__content">
+            <div class="hero__kicker" data-hero-enter="up" data-hero-delay="1">
+              <span class="hero__kicker-rule" aria-hidden="true"></span>
+              <span>Премиальный барбершоп · Тверская</span>
+            </div>
+
+            <div class="hero__brand-mark" aria-hidden="true" data-hero-enter="up" data-hero-delay="2">
+              NOIR
+            </div>
+
+            <h1 class="hero__title" id="hero-heading">
+              <span class="hero__title-mask">
+                <span class="hero__title-line" data-hero-enter="line" data-hero-delay="2">Архитектура</span>
+              </span>
+              <span class="hero__title-mask">
+                <span class="hero__title-line hero__title-line--accent" data-hero-enter="line" data-hero-delay="3">
+                  <em>мужского</em> стиля
+                </span>
+              </span>
+            </h1>
+
+            <p class="hero__subtitle" data-hero-enter="up" data-hero-delay="4">
+              Камерное пространство с европейской культурой груминга. Безупречная геометрия стрижки,
+              ритуал влажного бритья и сдержанная эстетика без лишнего шума.
+            </p>
+
+            <div class="hero__actions" data-hero-enter="up" data-hero-delay="5">
+              <a class="btn btn--primary" href="#booking">
+                <span>Записаться на визит</span>
+                <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </a>
+              <a class="hero__secondary-link" href="#services">
+                <span>Услуги и прайс</span>
+                <svg class="hero__secondary-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.15"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Atmospheric Portrait Column -->
+          <div class="hero__visual">
+            <figure class="hero__figure" data-hero-enter="portrait" data-hero-delay="1">
+              <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+              <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+
+              <div class="hero__media-mask">
+                <img
+                  class="hero__image"
+                  src="./assets/images/hero-portrait.jpg"
+                  alt="Портрет мужчины с современной аккуратной стрижкой в эстетике барбершопа NOIR"
+                  width="1080"
+                  height="1440"
+                  fetchpriority="high"
+                  decoding="async"
+                  data-parallax="0.1"
+                >
+              </div>
+
+              <figcaption class="hero__figcaption">
+                <span>NOIR · Portrait I</span>
+                <span>Precision Cut &amp; Grooming</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Bottom Architectural Metadata Strip -->
+        <div class="hero__footer" data-hero-enter="up" data-hero-delay="6">
+          <div class="hero__meta-group">
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Телефон</span>
+              <a class="hero__meta-value hero__meta-link" href="tel:+79991234567">+7 (999) 123-45-67</a>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Адрес</span>
+              <span class="hero__meta-value">ул. Тверская, 18</span>
+            </div>
+            <div class="hero__meta-item">
+              <span class="hero__meta-label">Часы работы</span>
+              <span class="hero__meta-value">Ежедневно, 10:00 — 22:00</span>
+            </div>
+          </div>
+
+          <a class="hero__scroll-indicator" href="#about" aria-label="Перейти к следующему разделу">
+            <span class="hero__scroll-label">Листайте вниз</span>
+            <span class="hero__scroll-track" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Следующие секции (будут реализованы на последующих этапах) -->
+    <!-- 02. ABOUT SECTION -->
+    <section class="section section--surface about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <!-- Editorial Header Band -->
+        <div class="about__header">
+          <div class="about__intro">
+            <div class="about__eyebrow" data-reveal>
+              <span class="about__number">02</span>
+              <span class="about__eyebrow-line" aria-hidden="true"></span>
+              <span class="about__label">ABOUT US</span>
+            </div>
+
+            <h2 class="about__title" id="about-heading" data-reveal data-delay="1">
+              Тишина, точность<br>и <em>уважение</em> к форме
+            </h2>
+          </div>
+
+          <aside class="about__statement" data-reveal="slide-left" data-delay="2">
+            <p class="about__accent-quote">
+              «Мы не ускоряем время — мы возвращаем мужскому грумингу его подлинный ритм и характер.»
+            </p>
+            <span class="about__signature">NOIR · Философия дома, с 2019</span>
+          </aside>
+        </div>
+
+        <hr class="hairline about__divider" data-reveal="line">
+
+        <!-- Asymmetric Editorial Magazine Spread -->
+        <div class="about__spread">
+          <!-- Primary Large Photograph Column -->
+          <div class="about__primary-media">
+            <figure class="about__main-figure">
+              <span class="about__corner about__corner--tl" aria-hidden="true"></span>
+
+              <div class="about__main-mask" data-reveal="image">
+                <div class="about__parallax-layer" data-parallax-scroll="0.06">
+                  <img
+                    class="about__main-img"
+                    src="./assets/images/about-interior.jpg"
+                    alt="Минималистичный интерьер премиального барбершопа NOIR в тёмных графитовых тонах"
+                    width="960"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <figcaption class="about__caption" data-reveal data-delay="2">
+                <span>Пространство · Тверская</span>
+                <span class="about__caption-index">PLATE 02 / INTERIEUR</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Narrative, Secondary Detail Photograph & Principles Column -->
+          <div class="about__editorial">
+            <div class="about__copy">
+              <p class="about__lead" data-reveal data-delay="1">
+                NOIR создан как альтернатива поточным салонам: четыре кресла, приглушённый
+                архитектурный свет и абсолютное внимание к пропорциям лица, росту волос и вашей
+                повседневной эстетике.
+              </p>
+              <p class="about__text" data-reveal data-delay="2">
+                Каждая стрижка строится вручную — без шаблонных схем и спешки. Мы работаем на
+                японской стали и европейской аптечной косметике, чтобы форма оставалась собранной
+                неделями и не требовала сложной укладки.
+              </p>
+            </div>
+
+            <!-- Secondary Small Detail Photograph (deliberate editorial offset) -->
+            <figure class="about__detail-figure" data-reveal="slide-left" data-delay="2">
+              <div class="about__detail-mask" data-reveal="image" data-delay="2">
+                <img
+                  class="about__detail-img"
+                  src="./assets/images/about-craft.jpg"
+                  alt="Инструменты барбера из матовой японской стали и средства для бритья NOIR"
+                  width="960"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </div>
+              <figcaption class="about__detail-caption">
+                <span class="about__detail-rule" aria-hidden="true"></span>
+                <span>Инструменты · Японская сталь &amp; уход</span>
+              </figcaption>
+            </figure>
+
+            <!-- Restrained Hairline Typographic Ledger (not generic cards) -->
+            <dl class="about__facts" data-reveal data-delay="3">
+              <div class="about__fact">
+                <dt class="about__fact-label">Практика мастеров</dt>
+                <dd class="about__fact-value">7+ лет</dd>
+              </div>
+              <div class="about__fact">
+                <dt class="about__fact-label">Время на визит</dt>
+                <dd class="about__fact-value">60 мин</dd>
+              </div>
+              <div class="about__fact">
+                <dt class="about__fact-label">Камерный зал</dt>
+                <dd class="about__fact-value">4 кресла</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 03. SERVICES SECTION -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <!-- Editorial Header Band -->
+        <div class="services__header">
+          <div class="services__intro">
+            <div class="services__eyebrow" data-reveal>
+              <span class="services__number">03</span>
+              <span class="services__eyebrow-line" aria-hidden="true"></span>
+              <span class="services__label">SERVICES</span>
+            </div>
+
+            <h2 class="services__title" id="services-heading" data-reveal data-delay="1">
+              Искусство <em>точной</em> работы
+            </h2>
+          </div>
+
+          <p class="services__lead" data-reveal="slide-left" data-delay="2">
+            Мы выстраиваем форму под структуру волос, анатомию и привычный ритм жизни.
+            Никакой потоковой спешки — только ручная точность, чистые линии и выверенный уход.
+          </p>
+        </div>
+
+        <hr class="hairline services__divider" data-reveal="line">
+
+        <!-- Asymmetric Editorial Spread: Price Ledger + Large Atmospheric Craft Photo -->
+        <div class="services__spread">
+          <div class="services__ledger-col">
+            <ol class="services-list" aria-label="Прайс-лист услуг барбершопа NOIR">
+              <li class="service-item" data-reveal data-delay="1">
+                <span class="service-item__num" aria-hidden="true">01</span>
+                <div class="service-item__content">
+                  <h3 class="service-item__title">Мужская стрижка</h3>
+                  <p class="service-item__desc">
+                    Индивидуальная архитектура формы ножницами и машинкой, мытьё головы и лёгкая укладка.
+                  </p>
+                </div>
+                <div class="service-item__meta">
+                  <span class="service-item__price">2&nbsp;000&nbsp;₽</span>
+                  <span class="service-item__duration">60&nbsp;мин</span>
+                </div>
+              </li>
+
+              <li class="service-item" data-reveal data-delay="2">
+                <span class="service-item__num" aria-hidden="true">02</span>
+                <div class="service-item__content">
+                  <h3 class="service-item__title">Стрижка машинкой</h3>
+                  <p class="service-item__desc">
+                    Чистые переходы, выверенная геометрия висков и аккуратная окантовка без лишних деталей.
+                  </p>
+                </div>
+                <div class="service-item__meta">
+                  <span class="service-item__price">1&nbsp;200&nbsp;₽</span>
+                  <span class="service-item__duration">30&nbsp;мин</span>
+                </div>
+              </li>
+
+              <li class="service-item" data-reveal data-delay="3">
+                <span class="service-item__num" aria-hidden="true">03</span>
+                <div class="service-item__content">
+                  <h3 class="service-item__title">Моделирование бороды</h3>
+                  <p class="service-item__desc">
+                    Коррекция объёма, чёткий контур опасной бритвой и смягчающий уход натуральным маслом.
+                  </p>
+                </div>
+                <div class="service-item__meta">
+                  <span class="service-item__price">1&nbsp;500&nbsp;₽</span>
+                  <span class="service-item__duration">40&nbsp;мин</span>
+                </div>
+              </li>
+
+              <li class="service-item" data-reveal data-delay="4">
+                <span class="service-item__num" aria-hidden="true">04</span>
+                <div class="service-item__content">
+                  <h3 class="service-item__title">Комплекс «Стрижка + борода»</h3>
+                  <p class="service-item__desc">
+                    Целостная работа над образом: гармоничные пропорции стрижки, контур бороды и уход за кожей.
+                  </p>
+                </div>
+                <div class="service-item__meta">
+                  <span class="service-item__price">3&nbsp;000&nbsp;₽</span>
+                  <span class="service-item__duration">90&nbsp;мин</span>
+                </div>
+              </li>
+
+              <li class="service-item" data-reveal data-delay="5">
+                <span class="service-item__num" aria-hidden="true">05</span>
+                <div class="service-item__content">
+                  <h3 class="service-item__title">Королевское бритьё</h3>
+                  <p class="service-item__desc">
+                    Классический ритуал с горячим полотенцем, густой пеной, опасной бритвой и бальзамом.
+                  </p>
+                </div>
+                <div class="service-item__meta">
+                  <span class="service-item__price">1&nbsp;800&nbsp;₽</span>
+                  <span class="service-item__duration">45&nbsp;мин</span>
+                </div>
+              </li>
+            </ol>
+
+            <div class="services__cta-bar" data-reveal data-delay="2">
+              <p class="services__note">
+                В каждый визит входят консультация мастера, мытьё головы европейской косметикой и эспрессо.
+              </p>
+              <a class="btn btn--primary services__cta" href="#booking">
+                <span>Записаться на визит</span>
+                <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Large Atmospheric Craft Photograph -->
+          <div class="services__visual-col">
+            <figure class="services__figure">
+              <span class="services__corner services__corner--tr" aria-hidden="true"></span>
+
+              <div class="services__media-mask" data-reveal="image">
+                <div class="services__parallax-layer" data-parallax-scroll="0.05">
+                  <img
+                    class="services__img"
+                    src="./assets/images/services-craft.jpg"
+                    alt="Работа мастера NOIR: точная мужская стрижка ножницами в приглушённом свете"
+                    width="960"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <figcaption class="services__figcaption" data-reveal data-delay="2">
+                <span>Ремесло · Ручная техника</span>
+                <span class="services__figcaption-index">PLATE 03 / CRAFT</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 04. MASTERS SECTION -->
+    <section class="section section--surface masters" id="masters" aria-labelledby="masters-heading">
+      <div class="container">
+        <!-- Editorial Header Band -->
+        <div class="masters__header">
+          <div class="masters__intro">
+            <div class="masters__eyebrow" data-reveal>
+              <span class="masters__number">04</span>
+              <span class="masters__eyebrow-line" aria-hidden="true"></span>
+              <span class="masters__label">MASTERS</span>
+            </div>
+
+            <h2 class="masters__title" id="masters-heading" data-reveal data-delay="1">
+              Люди, стоящие<br>за <em>формой</em>
+            </h2>
+          </div>
+
+          <p class="masters__lead" data-reveal="slide-left" data-delay="2">
+            В NOIR нет случайных рук. Каждый мастер прошёл европейскую школу и работает
+            с индивидуальной геометрией: мы учитываем направление роста волос, черты лица
+            и привычный стиль жизни ещё до первого касания ножниц.
+          </p>
+        </div>
+
+        <hr class="hairline masters__divider" data-reveal="line">
+
+        <!-- Asymmetric Editorial Team Presentation -->
+        <div class="masters__layout">
+          <!-- Flagship Master Column (Sticky Lead Portrait on Desktop) -->
+          <div class="masters__featured">
+            <article class="master-profile master-profile--lead" data-reveal data-delay="1">
+              <div class="master-profile__media">
+                <span class="master-profile__corner master-profile__corner--tl" aria-hidden="true"></span>
+                <span class="master-profile__badge" aria-hidden="true">01 / SENIOR</span>
+
+                <div class="master-profile__mask" data-reveal="image">
+                  <div class="master-profile__parallax" data-parallax-scroll="0.05">
+                    <img
+                      class="master-profile__img"
+                      src="./assets/images/master-volkov.jpg"
+                      alt="Александр Волков — Senior Barber барбершопа NOIR"
+                      width="900"
+                      height="1125"
+                      loading="lazy"
+                      decoding="async"
+                    >
+                  </div>
+
+                  <div class="master-profile__overlay">
+                    <span class="master-profile__overlay-kicker">Почерк мастера</span>
+                    <p class="master-profile__overlay-text">
+                      Работает преимущественно ножницами, выстраивая силуэт с расчётом
+                      на естественное отрастание без ежедневной сложной укладки.
+                    </p>
+                    <span class="master-profile__overlay-tags">Классика · Удлинённые формы · Консультация</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="master-profile__body">
+                <div class="master-profile__meta">
+                  <span class="master-profile__role">Senior Barber</span>
+                  <span class="master-profile__exp">Опыт 11 лет</span>
+                </div>
+
+                <h3 class="master-profile__name">Александр Волков</h3>
+
+                <p class="master-profile__spec">
+                  Архитектурные мужские стрижки, удлинённые классические силуэты
+                  и индивидуальный подбор формы под структуру волос.
+                </p>
+
+                <div class="master-profile__footer">
+                  <span class="master-profile__note">Ведущий мастер дома NOIR</span>
+                  <a class="master-profile__action" href="#booking">
+                    <span>Записаться</span>
+                    <svg class="master-profile__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Secondary Asymmetric Column (Two Distinct Editorial Profiles) -->
+          <div class="masters__secondary">
+            <!-- Master 02: Mikhail Orlov -->
+            <article class="master-profile master-profile--compact" data-reveal data-delay="2">
+              <div class="master-profile__media">
+                <span class="master-profile__badge" aria-hidden="true">02 / BARBER</span>
+
+                <div class="master-profile__mask master-profile__mask--compact" data-reveal="image" data-delay="1">
+                  <img
+                    class="master-profile__img"
+                    src="./assets/images/master-orlov.jpg"
+                    alt="Михаил Орлов — Barber барбершопа NOIR"
+                    width="840"
+                    height="1050"
+                    loading="lazy"
+                    decoding="async"
+                  >
+
+                  <div class="master-profile__overlay">
+                    <span class="master-profile__overlay-kicker">Почерк мастера</span>
+                    <p class="master-profile__overlay-text">
+                      Чистая графика висков, мягкий бесшовный fade и аккуратная текстура
+                      для собранного делового и городского стиля.
+                    </p>
+                    <span class="master-profile__overlay-tags">Текстура · Taper Fade · Чёткий контур</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="master-profile__body">
+                <div class="master-profile__meta">
+                  <span class="master-profile__role">Barber</span>
+                  <span class="master-profile__exp">Опыт 7 лет</span>
+                </div>
+
+                <h3 class="master-profile__name">Михаил Орлов</h3>
+
+                <p class="master-profile__spec">
+                  Современные текстурные стрижки, чистые переходы fade
+                  и выверенная геометрия коротких форм.
+                </p>
+
+                <div class="master-profile__footer">
+                  <span class="master-profile__note">Точность и текстура</span>
+                  <a class="master-profile__action" href="#booking">
+                    <span>Записаться</span>
+                    <svg class="master-profile__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <hr class="hairline masters__sub-divider" data-reveal="line">
+
+            <!-- Master 03: Daniil Smirnov (Intentional Editorial Horizontal Offset) -->
+            <article class="master-profile master-profile--offset" data-reveal data-delay="3">
+              <div class="master-profile__media">
+                <span class="master-profile__corner master-profile__corner--br" aria-hidden="true"></span>
+                <span class="master-profile__badge" aria-hidden="true">03 / BARBER</span>
+
+                <div class="master-profile__mask master-profile__mask--tall" data-reveal="image" data-delay="2">
+                  <img
+                    class="master-profile__img"
+                    src="./assets/images/master-smirnov.jpg"
+                    alt="Даниил Смирнов — Barber барбершопа NOIR"
+                    width="840"
+                    height="1120"
+                    loading="lazy"
+                    decoding="async"
+                  >
+
+                  <div class="master-profile__overlay">
+                    <span class="master-profile__overlay-kicker">Почерк мастера</span>
+                    <p class="master-profile__overlay-text">
+                      Специализируется на скульптурном моделировании бороды и классическом
+                      влажном бритье с горячим полотенцем и опасной бритвой.
+                    </p>
+                    <span class="master-profile__overlay-tags">Борода · Опасная бритва · Уход за кожей</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="master-profile__body">
+                <div class="master-profile__meta">
+                  <span class="master-profile__role">Barber</span>
+                  <span class="master-profile__exp">Опыт 6 лет</span>
+                </div>
+
+                <h3 class="master-profile__name">Даниил Смирнов</h3>
+
+                <p class="master-profile__spec">
+                  Моделирование бороды, королевское влажное бритьё опасной бритвой
+                  и строгие классические мужские стрижки.
+                </p>
+
+                <div class="master-profile__footer">
+                  <span class="master-profile__note">Ритуал бритья и борода</span>
+                  <a class="master-profile__action" href="#booking">
+                    <span>Записаться</span>
+                    <svg class="master-profile__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. CONTACTS SECTION -->
+    <section class="section contacts" id="contacts" aria-labelledby="contacts-heading">
+      <div class="container">
+        <!-- Editorial Header Band -->
+        <div class="contacts__header">
+          <div class="contacts__intro">
+            <div class="contacts__eyebrow" data-reveal>
+              <span class="contacts__number">05</span>
+              <span class="contacts__eyebrow-line" aria-hidden="true"></span>
+              <span class="contacts__label">CONTACTS</span>
+            </div>
+
+            <h2 class="contacts__title" id="contacts-heading" data-reveal data-delay="1">
+              Место, где начинается<br><em>ваш стиль</em>
+            </h2>
+          </div>
+
+          <p class="contacts__lead" data-reveal="slide-left" data-delay="2">
+            Загляните в NOIR BARBER на Тверской — на точную стрижку, спокойную консультацию
+            с мастером и чашку эспрессо в камерной тишине в самом центре города.
+          </p>
+        </div>
+
+        <hr class="hairline contacts__divider" data-reveal="line">
+
+        <!-- Asymmetric Editorial Spread: Atmospheric Facade Photo + Contact Ledger & Scheme -->
+        <div class="contacts__spread">
+          <!-- Left Column: Large Atmospheric Facade Photograph -->
+          <div class="contacts__visual-col">
+            <figure class="contacts__figure">
+              <span class="contacts__corner contacts__corner--tl" aria-hidden="true"></span>
+
+              <div class="contacts__media-mask" data-reveal="image">
+                <div class="contacts__parallax-layer" data-parallax-scroll="0.05">
+                  <img
+                    class="contacts__img"
+                    src="./assets/images/contacts-facade.jpg"
+                    alt="Минималистичный фасад и входная группа барбершопа NOIR BARBER в вечернем свете"
+                    width="960"
+                    height="1200"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
+              </div>
+
+              <figcaption class="contacts__figcaption" data-reveal data-delay="2">
+                <span>Тверская, 18 · Вход со двора</span>
+                <span class="contacts__figcaption-index">PLATE 05 / ATELIER</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Right Column: Editorial Contact Details, Actions & Stylized Location Scheme -->
+          <div class="contacts__info-col">
+            <address class="contacts__ledger">
+              <!-- Row 01: Address -->
+              <div class="contact-item" data-reveal data-delay="1">
+                <span class="contact-item__label">01 / Адрес</span>
+                <div class="contact-item__body">
+                  <p class="contact-item__value">Москва, улица Тверская, 18</p>
+                  <p class="contact-item__sub">ст. м. Тверская / Пушкинская · 3 минуты пешком</p>
+                  <a
+                    class="contact-item__inline-link"
+                    href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%2C%2018"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Открыть адрес на карте</span>
+                    <svg class="contact-item__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                      <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Row 02: Phone -->
+              <div class="contact-item" data-reveal data-delay="2">
+                <span class="contact-item__label">02 / Телефон</span>
+                <div class="contact-item__body">
+                  <a class="contact-item__phone" href="tel:+79991234567">+7&nbsp;(999)&nbsp;123-45-67</a>
+                  <p class="contact-item__sub">Запись по телефону и уточнение свободных окон</p>
+                </div>
+              </div>
+
+              <!-- Row 03: Working Hours -->
+              <div class="contact-item" data-reveal data-delay="3">
+                <span class="contact-item__label">03 / График</span>
+                <div class="contact-item__body">
+                  <dl class="contacts__hours">
+                    <div class="contacts__hours-row">
+                      <dt class="contacts__hours-days">Пн–Пт</dt>
+                      <dd class="contacts__hours-time">10:00–22:00</dd>
+                    </div>
+                    <div class="contacts__hours-row">
+                      <dt class="contacts__hours-days">Сб–Вс</dt>
+                      <dd class="contacts__hours-time">10:00–21:00</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <!-- Row 04: Direct Communication Links -->
+              <div class="contact-item contact-item--actions" data-reveal data-delay="4">
+                <span class="contact-item__label">04 / Связь</span>
+                <div class="contact-item__body">
+                  <div class="contacts__actions">
+                    <a class="contacts__action-link" href="tel:+79991234567">
+                      <span>Позвонить</span>
+                      <svg class="contact-item__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                      </svg>
+                    </a>
+                    <a
+                      class="contacts__action-link"
+                      href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%A2%D0%B2%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%2C%2018"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>На карте</span>
+                      <svg class="contact-item__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.2"/>
+                      </svg>
+                    </a>
+                    <a
+                      class="contacts__action-link contacts__action-link--accent"
+                      href="https://t.me/noir_barber_demo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>Написать в Telegram</span>
+                      <svg class="contact-item__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.2"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </address>
+
+            <!-- Stylized Architectural Location Scheme (No heavy third-party map embed) -->
+            <div class="contacts__scheme" data-reveal data-delay="4" aria-label="Стилизованная схема расположения NOIR BARBER на Тверской, 18">
+              <svg class="contacts__scheme-svg" viewBox="0 0 640 260" fill="none" aria-hidden="true">
+                <!-- Architectural street grid -->
+                <path d="M0 185L640 82" stroke="rgba(242,239,233,0.22)" stroke-width="1.5"/>
+                <path d="M0 198L640 95" stroke="rgba(242,239,233,0.1)" stroke-width="1"/>
+                <path d="M128 0L188 260" stroke="rgba(242,239,233,0.14)" stroke-width="1"/>
+                <path d="M366 0L438 260" stroke="rgba(242,239,233,0.12)" stroke-width="1"/>
+                <path d="M518 0L486 260" stroke="rgba(242,239,233,0.09)" stroke-width="1"/>
+                <path d="M0 64L640 202" stroke="rgba(242,239,233,0.08)" stroke-width="1"/>
+                <!-- Subtle architectural block outlines -->
+                <rect x="206" y="42" width="128" height="62" stroke="rgba(242,239,233,0.09)" stroke-width="1"/>
+                <rect x="442" y="138" width="112" height="64" stroke="rgba(242,239,233,0.08)" stroke-width="1"/>
+                <!-- Burgundy highlight line along Tverskaya axis -->
+                <path d="M220 150L440 114" stroke="rgba(137,37,53,0.72)" stroke-width="1.5"/>
+                <!-- Concentric location marker rings -->
+                <circle cx="332" cy="132" r="34" stroke="rgba(137,37,53,0.26)" stroke-width="1"/>
+                <circle cx="332" cy="132" r="18" stroke="rgba(137,37,53,0.52)" stroke-width="1"/>
+                <circle cx="332" cy="132" r="5" fill="#892535"/>
+              </svg>
+
+              <div class="contacts__scheme-top">
+                <span class="contacts__scheme-coords">55.7648° N · 37.6054° E</span>
+                <span class="contacts__scheme-badge">TVERSKAYA · 18</span>
+              </div>
+
+              <div class="contacts__scheme-bottom">
+                <span class="contacts__scheme-watermark" aria-hidden="true">NOIR</span>
+                <span class="contacts__scheme-caption">Москва · Центральный округ</span>
+              </div>
+            </div>
+
+            <p class="contacts__disclaimer" data-reveal data-delay="5">
+              Демонстрационные контактные данные вымышленного барбершопа NOIR BARBER.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. BOOKING SECTION -->
+    <section class="section section--surface booking" id="booking" aria-labelledby="booking-heading">
+      <div class="container">
+        <!-- Editorial Header Band -->
+        <div class="booking__header">
+          <div class="booking__intro">
+            <div class="booking__eyebrow" data-reveal>
+              <span class="booking__number">06</span>
+              <span class="booking__eyebrow-line" aria-hidden="true"></span>
+              <span class="booking__label">BOOKING</span>
+            </div>
+
+            <h2 class="booking__title" id="booking-heading" data-reveal data-delay="1">
+              Ваш следующий<br><em>визит</em>
+            </h2>
+          </div>
+
+          <p class="booking__lead" data-reveal="slide-left" data-delay="2">
+            Выберите услугу и удобное время. Мы свяжемся с вами для подтверждения записи.
+          </p>
+        </div>
+
+        <hr class="hairline booking__divider" data-reveal="line">
+
+        <!-- Asymmetric 12-Column Spread: Sticky Live Summary + Interactive Booking Form -->
+        <div class="booking__spread">
+          <!-- Left Column (5 cols, sticky on desktop): Editorial Live Summary Card -->
+          <aside class="booking__summary-col" data-reveal data-delay="1">
+            <div class="booking__summary-card">
+              <div class="booking__summary-top">
+                <span class="booking__summary-badge">06 / RESERVATION</span>
+                <span class="booking__summary-tag">ATELIER NOIR</span>
+              </div>
+
+              <h3 class="booking__summary-heading">Резюме визита</h3>
+
+              <dl class="booking-summary__list">
+                <div class="booking-summary__row">
+                  <dt class="booking-summary__term">Услуга</dt>
+                  <dd class="booking-summary__val" id="summary-service">Не выбрана</dd>
+                </div>
+                <div class="booking-summary__row">
+                  <dt class="booking-summary__term">Длительность</dt>
+                  <dd class="booking-summary__val" id="summary-duration">—</dd>
+                </div>
+                <div class="booking-summary__row">
+                  <dt class="booking-summary__term">Мастер</dt>
+                  <dd class="booking-summary__val" id="summary-master">Любой свободный мастер</dd>
+                </div>
+                <div class="booking-summary__row">
+                  <dt class="booking-summary__term">Дата</dt>
+                  <dd class="booking-summary__val" id="summary-date">Не выбрана</dd>
+                </div>
+                <div class="booking-summary__row">
+                  <dt class="booking-summary__term">Время</dt>
+                  <dd class="booking-summary__val" id="summary-time">Не выбрано</dd>
+                </div>
+                <div class="booking-summary__row booking-summary__row--total">
+                  <dt class="booking-summary__term">Ориентировочная стоимость</dt>
+                  <dd class="booking-summary__val booking-summary__val--total" id="summary-total">—</dd>
+                </div>
+              </dl>
+
+              <div class="booking__summary-note">
+                <p>
+                  Камерный формат: мы резервируем кресло и мастера целиком под ваш визит.
+                  Гарантируем отсутствие спешки, абсолютную тишину и выверенный ритуал ухода.
+                </p>
+              </div>
+
+              <div class="booking__summary-direct">
+                <span class="booking__summary-direct-label">Прямой звонок администратору</span>
+                <a class="booking__summary-direct-phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Right Column (7 cols): Editorial Form & Prepared State Box -->
+          <div class="booking__form-col">
+            <form class="booking-form" id="booking-form" novalidate data-reveal data-delay="2">
+              <div class="booking-form__fields">
+                <!-- Field 1: Client Name -->
+                <div class="booking-field" data-field-group="name">
+                  <label class="booking-field__label" for="booking-name">
+                    <span>Имя клиента</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="booking-field__input"
+                    type="text"
+                    id="booking-name"
+                    name="name"
+                    placeholder="Как к вам обращаться"
+                    required
+                    autocomplete="name"
+                    aria-describedby="booking-name-error"
+                    aria-invalid="false"
+                  >
+                  <span class="booking-field__error" id="booking-name-error" role="alert"></span>
+                </div>
+
+                <!-- Field 2: Client Phone -->
+                <div class="booking-field" data-field-group="phone">
+                  <label class="booking-field__label" for="booking-phone">
+                    <span>Номер телефона</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="booking-field__input"
+                    type="tel"
+                    id="booking-phone"
+                    name="phone"
+                    placeholder="+7 (___) ___-__-__"
+                    required
+                    autocomplete="tel"
+                    aria-describedby="booking-phone-error"
+                    aria-invalid="false"
+                  >
+                  <span class="booking-field__error" id="booking-phone-error" role="alert"></span>
+                </div>
+
+                <!-- Field 3: Service Select -->
+                <div class="booking-field" data-field-group="service">
+                  <label class="booking-field__label" for="booking-service">
+                    <span>Услуга</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </label>
+                  <div class="booking-field__select-wrap">
+                    <select
+                      class="booking-field__select"
+                      id="booking-service"
+                      name="service"
+                      required
+                      aria-describedby="booking-service-error"
+                      aria-invalid="false"
+                    >
+                      <option value="" disabled selected>Выберите услугу из меню</option>
+                      <option value="haircut" data-price="2000" data-duration="60">Мужская стрижка — 2 000 ₽ / 60 мин</option>
+                      <option value="machine" data-price="1200" data-duration="30">Стрижка машинкой — 1 200 ₽ / 30 мин</option>
+                      <option value="beard" data-price="1500" data-duration="40">Моделирование бороды — 1 500 ₽ / 40 мин</option>
+                      <option value="complex" data-price="3000" data-duration="90">Комплекс «Стрижка + борода» — 3 000 ₽ / 90 мин</option>
+                      <option value="royal-shave" data-price="1800" data-duration="45">Королевское бритьё — 1 800 ₽ / 45 мин</option>
+                    </select>
+                  </div>
+                  <span class="booking-field__error" id="booking-service-error" role="alert"></span>
+                </div>
+
+                <!-- Field 4: Master Select -->
+                <div class="booking-field" data-field-group="master">
+                  <label class="booking-field__label" for="booking-master">
+                    <span>Мастер</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </label>
+                  <div class="booking-field__select-wrap">
+                    <select
+                      class="booking-field__select"
+                      id="booking-master"
+                      name="master"
+                      required
+                      aria-describedby="booking-master-error"
+                      aria-invalid="false"
+                    >
+                      <option value="any" selected>Любой свободный мастер</option>
+                      <option value="volkov">Александр Волков (Senior Barber)</option>
+                      <option value="orlov">Михаил Орлов (Barber)</option>
+                      <option value="smirnov">Даниил Смирнов (Barber)</option>
+                    </select>
+                  </div>
+                  <span class="booking-field__error" id="booking-master-error" role="alert"></span>
+                </div>
+
+                <!-- Field 5: Date Input -->
+                <div class="booking-field" data-field-group="date">
+                  <label class="booking-field__label" for="booking-date">
+                    <span>Желаемая дата</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    class="booking-field__input booking-field__input--date"
+                    type="date"
+                    id="booking-date"
+                    name="date"
+                    required
+                    aria-describedby="booking-date-error"
+                    aria-invalid="false"
+                  >
+                  <span class="booking-field__error" id="booking-date-error" role="alert"></span>
+                </div>
+
+                <!-- Field 6: Time Selection (Interactive Chips) -->
+                <div class="booking-field booking-field--full" data-field-group="time">
+                  <span class="booking-field__label" id="booking-time-label">
+                    <span>Желаемое время</span>
+                    <span class="booking-field__req" aria-hidden="true">*</span>
+                  </span>
+                  <div
+                    class="booking-slots"
+                    role="radiogroup"
+                    aria-labelledby="booking-time-label"
+                    id="booking-slots-container"
+                  >
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="10:00">10:00</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="11:30">11:30</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="13:00">13:00</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="14:30">14:30</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="16:00">16:00</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="17:30">17:30</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="19:00">19:00</button>
+                    <button type="button" class="booking-slot" role="radio" aria-checked="false" data-time="20:30">20:30</button>
+                  </div>
+                  <input type="hidden" id="booking-time" name="time" value="" required>
+                  <span class="booking-field__error" id="booking-time-error" role="alert"></span>
+                </div>
+
+                <!-- Field 7: Privacy Policy & Consent Checkbox -->
+                <div class="booking-field booking-field--full" data-field-group="consent">
+                  <label class="booking-consent">
+                    <input
+                      class="booking-consent__checkbox"
+                      type="checkbox"
+                      id="booking-consent"
+                      name="consent"
+                      required
+                      aria-describedby="booking-consent-error"
+                      aria-invalid="false"
+                    >
+                    <span class="booking-consent__custom" aria-hidden="true"></span>
+                    <span class="booking-consent__text">
+                      Я согласен на обработку персональных данных в соответствии с
+                      <button type="button" class="booking-consent__link" id="policy-open-btn">демонстрационной политикой конфиденциальности</button>
+                      <span class="booking-field__req" aria-hidden="true">*</span>
+                    </span>
+                  </label>
+                  <span class="booking-field__error" id="booking-consent-error" role="alert"></span>
+                </div>
+              </div>
+
+              <!-- Submit Action Row -->
+              <div class="booking-actions">
+                <button class="btn btn--primary booking__submit-btn" type="submit" id="booking-submit-btn">
+                  <span>Подтвердить параметры записи</span>
+                  <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                  </svg>
+                </button>
+                <p class="booking-actions__hint">
+                  Демонстрационный режим: данные не передаются на сервер.
+                </p>
+              </div>
+            </form>
+
+            <!-- Prepared Demonstration Booking Notice (Displayed upon valid form check) -->
+            <div
+              class="booking-status"
+              id="booking-status"
+              role="region"
+              aria-live="polite"
+              hidden
+            >
+              <div class="booking-status__badge">
+                <span class="booking-status__dot" aria-hidden="true"></span>
+                <span>ДЕМОНСТРАЦИОННАЯ ЗАПИСЬ</span>
+              </div>
+
+              <h3 class="booking-status__title">Параметры визита подготовлены</h3>
+
+              <p class="booking-status__notice">
+                «Заявка подготовлена. Для завершения демонстрационной записи свяжитесь с нами по телефону или в Telegram».
+              </p>
+
+              <!-- Prepared Data Review -->
+              <div class="booking-status__review">
+                <div class="booking-status__item">
+                  <span class="booking-status__label">Клиент</span>
+                  <span class="booking-status__val" id="review-name">—</span>
+                </div>
+                <div class="booking-status__item">
+                  <span class="booking-status__label">Телефон</span>
+                  <span class="booking-status__val" id="review-phone">—</span>
+                </div>
+                <div class="booking-status__item">
+                  <span class="booking-status__label">Услуга</span>
+                  <span class="booking-status__val" id="review-service">—</span>
+                </div>
+                <div class="booking-status__item">
+                  <span class="booking-status__label">Мастер</span>
+                  <span class="booking-status__val" id="review-master">—</span>
+                </div>
+                <div class="booking-status__item">
+                  <span class="booking-status__label">Дата и время</span>
+                  <span class="booking-status__val" id="review-datetime">—</span>
+                </div>
+              </div>
+
+              <!-- Direct Action Buttons -->
+              <div class="booking-status__actions">
+                <a class="btn btn--primary booking-status__btn" href="tel:+79991234567">
+                  <span>Позвонить: +7 (999) 123-45-67</span>
+                  <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="1.2"/>
+                  </svg>
+                </a>
+                <a
+                  class="btn btn--outline booking-status__btn"
+                  href="https://t.me/noir_barber_demo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Написать в Telegram</span>
+                  <svg class="btn__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.2"/>
+                  </svg>
+                </a>
+                <button class="booking-status__edit-btn" type="button" id="booking-edit-btn">
+                  <span>← Изменить параметры заявки</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Demo Privacy Policy Modal -->
+            <div
+              class="policy-modal"
+              id="policy-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="policy-modal-title"
+              hidden
+            >
+              <div class="policy-modal__backdrop" id="policy-backdrop"></div>
+              <div class="policy-modal__dialog">
+                <div class="policy-modal__header">
+                  <h4 class="policy-modal__title" id="policy-modal-title">Политика конфиденциальности (Демо)</h4>
+                  <button type="button" class="policy-modal__close" id="policy-close-btn" aria-label="Закрыть модальное окно">
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="16" height="16">
+                      <path d="M3 3L13 13M13 3L3 13" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="policy-modal__body">
+                  <p>
+                    Данный сайт является демонстрационным концепт-проектом для портфолио премиального барбершопа <strong>NOIR BARBER</strong>.
+                  </p>
+                  <p>
+                    Все вводимые вами данные (имя, номер телефона, выбранная услуга) обрабатываются исключительно на стороне вашего браузера в демонстрационных целях, не сохраняются в постоянных базах данных и никуда не передаются.
+                  </p>
+                  <p>
+                    Для реальной связи с авторами проекта воспользуйтесь контактными данными, указанными на сайте.
+                  </p>
+                </div>
+                <div class="policy-modal__footer">
+                  <button type="button" class="btn btn--outline" id="policy-confirm-btn">
+                    <span>Понятно</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 05. Gallery (#gallery) -->
+    <!-- 06. Advantages (#advantages) -->
+    <!-- 07. Reviews (#reviews) -->
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer class="site-footer" id="site-footer">
+    <div class="container site-footer__container">
+      <div class="site-footer__grid">
+        <!-- Col 1: Brand & Atelier Philosophy -->
+        <div class="site-footer__brand-col">
+          <a class="brand" href="#hero" aria-label="NOIR — на главную">
+            <span class="brand__wordmark">NOIR</span>
+            <span class="brand__dot" aria-hidden="true"></span>
+            <span class="brand__descriptor">Barber Atelier</span>
+          </a>
+          <p class="site-footer__tagline">
+            Камерное пространство мужского груминга в историческом центре Москвы.
+            Архитектурная точность формы, культура тишины и европейский ритуал ухода.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="site-footer__nav-col">
+          <h4 class="site-footer__heading">Навигация</h4>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="#hero">Главная</a></li>
+            <li><a class="site-footer__link" href="#about">О нас</a></li>
+            <li><a class="site-footer__link" href="#services">Услуги и прайс</a></li>
+            <li><a class="site-footer__link" href="#masters">Мастера</a></li>
+            <li><a class="site-footer__link" href="#contacts">Контакты</a></li>
+            <li><a class="site-footer__link" href="#booking">Онлайн-запись</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacts & Schedule -->
+        <div class="site-footer__contact-col">
+          <h4 class="site-footer__heading">Контакты</h4>
+          <div class="site-footer__info">
+            <p class="site-footer__address">Москва, улица Тверская, 18</p>
+            <p class="site-footer__metro">ст. м. Тверская / Пушкинская</p>
+            <a class="site-footer__phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+            <a class="site-footer__telegram" href="https://t.me/noir_barber_demo" target="_blank" rel="noopener noreferrer">Telegram: @noir_barber_demo</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Working Hours & Back to top -->
+        <div class="site-footer__hours-col">
+          <h4 class="site-footer__heading">График</h4>
+          <div class="site-footer__hours-list">
+            <p><span>Пн–Пт:</span> <strong>10:00 — 22:00</strong></p>
+            <p><span>Сб–Вс:</span> <strong>10:00 — 21:00</strong></p>
+          </div>
+          <a class="back-to-top" href="#hero" aria-label="Вернуться в начало страницы">
+            <span>Наверх</span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" width="14" height="14">
+              <path d="M8 13.5V2.5M8 2.5L3.5 7M8 2.5L12.5 7" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Watermark -->
+      <div class="site-footer__watermark" aria-hidden="true">
+        NOIR
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© 2026 NOIR Barber Atelier. Демонстрационный проект.</p>
+        <p class="site-footer__disclaimer">Все материалы и данные носят исключительно демонстрационный характер.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/navigation.js" defer></script>
+  <script src="./js/animations.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
