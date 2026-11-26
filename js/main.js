@@ -172,21 +172,60 @@
       });
     },
 
+    selectSlot(index) {
+      if (index < 0 || index >= this.slotButtons.length) return;
+      const targetBtn = this.slotButtons[index];
+
+      this.slotButtons.forEach((b, i) => {
+        const isCurrent = i === index;
+        b.classList.toggle('is-selected', isCurrent);
+        b.setAttribute('aria-checked', isCurrent ? 'true' : 'false');
+        b.setAttribute('tabindex', isCurrent ? '0' : '-1');
+      });
+
+      targetBtn.focus();
+      const timeVal = targetBtn.getAttribute('data-time') || '';
+      this.timeInput.value = timeVal;
+      this.clearFieldError(this.timeInput);
+      this.updateSummary();
+    },
+
     bindSlotSelection() {
       if (!this.slotButtons.length || !this.timeInput) return;
 
-      this.slotButtons.forEach((btn) => {
+      const selectedIdx = this.slotButtons.findIndex((b) => b.classList.contains('is-selected'));
+      this.slotButtons.forEach((b, i) => {
+        const isInitialFocusable = selectedIdx >= 0 ? i === selectedIdx : i === 0;
+        b.setAttribute('tabindex', isInitialFocusable ? '0' : '-1');
+        b.setAttribute('aria-checked', b.classList.contains('is-selected') ? 'true' : 'false');
+      });
+
+      this.slotButtons.forEach((btn, idx) => {
         btn.addEventListener('click', () => {
-          this.slotButtons.forEach((b) => {
-            b.classList.remove('is-selected');
-            b.setAttribute('aria-checked', 'false');
-          });
-          btn.classList.add('is-selected');
-          btn.setAttribute('aria-checked', 'true');
-          const timeVal = btn.getAttribute('data-time') || '';
-          this.timeInput.value = timeVal;
-          this.clearFieldError(this.timeInput);
-          this.updateSummary();
+          this.selectSlot(idx);
+        });
+
+        btn.addEventListener('keydown', (e) => {
+          let nextIdx = -1;
+          const total = this.slotButtons.length;
+
+          if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault();
+            nextIdx = (idx + 1) % total;
+          } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            nextIdx = (idx - 1 + total) % total;
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            nextIdx = 0;
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            nextIdx = total - 1;
+          }
+
+          if (nextIdx !== -1) {
+            this.selectSlot(nextIdx);
+          }
         });
       });
     },
@@ -448,25 +487,77 @@
     bindPolicyModal() {
       if (!this.policyModal) return;
 
-      const openModal = () => {
+      let lastFocusedTrigger = null;
+
+      const getFocusableElements = () => {
+        const dialog = this.policyModal.querySelector('.policy-modal__dialog') || this.policyModal;
+        return Array.from(
+          dialog.querySelectorAll(
+            'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+          )
+        );
+      };
+
+      const openModal = (triggerEl) => {
+        lastFocusedTrigger = triggerEl || document.activeElement;
         this.policyModal.hidden = false;
         document.body.classList.add('is-locked');
+
+        const focusable = getFocusableElements();
+        if (focusable.length) {
+          (this.policyCloseBtn || focusable[0]).focus();
+        }
       };
 
       const closeModal = () => {
         this.policyModal.hidden = true;
         document.body.classList.remove('is-locked');
-        if (this.policyOpenBtn) this.policyOpenBtn.focus();
+        if (lastFocusedTrigger && typeof lastFocusedTrigger.focus === 'function') {
+          lastFocusedTrigger.focus();
+        } else if (this.policyOpenBtn) {
+          this.policyOpenBtn.focus();
+        }
       };
 
-      if (this.policyOpenBtn) this.policyOpenBtn.addEventListener('click', openModal);
+      if (this.policyOpenBtn) {
+        this.policyOpenBtn.addEventListener('click', (e) => {
+          openModal(e.currentTarget);
+        });
+      }
       if (this.policyCloseBtn) this.policyCloseBtn.addEventListener('click', closeModal);
       if (this.policyConfirmBtn) this.policyConfirmBtn.addEventListener('click', closeModal);
       if (this.policyBackdrop) this.policyBackdrop.addEventListener('click', closeModal);
 
+      // Focus Trap: Tab, Shift + Tab, Escape
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !this.policyModal.hidden) {
+        if (this.policyModal.hidden) return;
+
+        if (e.key === 'Escape') {
+          e.preventDefault();
           closeModal();
+          return;
+        }
+
+        if (e.key === 'Tab') {
+          const focusable = getFocusableElements();
+          if (!focusable.length) {
+            e.preventDefault();
+            return;
+          }
+          const firstEl = focusable[0];
+          const lastEl = focusable[focusable.length - 1];
+
+          if (e.shiftKey) {
+            if (document.activeElement === firstEl || !this.policyModal.contains(document.activeElement)) {
+              e.preventDefault();
+              lastEl.focus();
+            }
+          } else {
+            if (document.activeElement === lastEl || !this.policyModal.contains(document.activeElement)) {
+              e.preventDefault();
+              firstEl.focus();
+            }
+          }
         }
       });
     },
